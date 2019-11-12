@@ -1,0 +1,32 @@
+<html>
+<body>
+<form action="/login/" method="post"> {% csrf_token %}
+    <table align="center" border="2">
+    <tr>
+        <th>LOGIN FORM </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="username" name="username" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="password" placeholder="password" name="password" required>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <button type="submit">LOGIN</button>
+        </th>
+    </tr>
+</table>
+</form>
+    {% if message %}
+    <span name="message">
+        message is {{ message }}
+    </span>{% endif %}
+
+</body>
+
+</html>
